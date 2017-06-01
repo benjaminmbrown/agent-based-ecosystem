@@ -1,2 +1,3 @@
-# agent-based-ecosystem
-An ecosystem of agent-based models.
+# autonomous agents ecosystem
+
+an attempt at building an ecosystem of autonomous agents
