@@ -4,7 +4,8 @@ var Flock = function(vehicles) {
 
 	this.run = function(){
 		for(var i = 0; i<this.vehicleFlock.length; i++){
-			this.vehicleFlock[i].run(this.vehicleFlock,this.flowField);
+			//this.vehicleFlock[i].seekTest();
+			this.vehicleFlock[i].run(this.vehicleFlock);
 		}
 	}
 

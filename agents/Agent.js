@@ -19,19 +19,17 @@ function Agent(x, y) {
     this.display = function() {
         stroke(255, this.maxLifespan - this.age); //gets more transparent as it dies
         strokeWeight(2);
-       
         fill(0, this.maxLifespan - this.age);
-        console.log('alpha', alpha);
         ellipse(this.position.x, this.position.y, 24, 24);
     }
 
     this.update = function() {
         this.velocity.add(this.acceleration);
         this.position.add(this.velocity)
-        this.age += 1;
+        this.age += 0.5;
     }
 
     this.isAlive = function() {
-        return this.age < this.maxLifespan ? true : false;
+        return (this.age < this.maxLifespan || this.life > 0) ? true : false;
     }
 }

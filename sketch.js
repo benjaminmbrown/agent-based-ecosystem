@@ -8,13 +8,13 @@ var Agents = [];
 function setup() {
 
     createCanvas(900, 600);
-    setFrameRate(40);
+    setFrameRate(460);
     flock = new Flock();
     predators = new Flock();
     var type = 1;
 
 
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 5; i++) {
         var v = new Vehicle(width / 2, height / 2, type);
         flock.addVehicle(v);
     }
@@ -51,8 +51,21 @@ function draw() {
 
     flock.run();
     predators.run();
-
     //spawnNew()
+    updateEnvironment();
+
+}
+
+function drawStats (){
+    textSize(20);
+    text('Flock size' + flock.length, 10,30);
+    fill(0,102,53);
+}
+function updateEnvironment (){
+
+}
+
+function respawnFlora(){
 
 }
 
