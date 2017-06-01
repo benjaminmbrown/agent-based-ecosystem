@@ -1,8 +1,6 @@
 'use strict';
-//MOTION BEHAVIORS
-
+//FORCE BEHAVIORS
 var forceBehaviors = {
-
 	applyForce: function(force) {
 		this.acceleration.add(force);
 	}

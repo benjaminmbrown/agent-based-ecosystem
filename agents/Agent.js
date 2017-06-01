@@ -1,3 +1,7 @@
+//Base class for all agents
+//considerit a 'cell'/ simple organism
+//Immobile and only has life
+
 function Agent(x, y) {
 
     this.position = createVector(x, y);
@@ -6,7 +10,7 @@ function Agent(x, y) {
 
     // this.lifeForce = 100;
     this.age = 0;
-    this.maxLifespan = 255;
+    this.maxLifespan = 25500;
     this.life = 100;
 
     this.c = color(0, 0, 0);

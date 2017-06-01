@@ -4,8 +4,8 @@ var reproductionBehaviors = {
 		//TODO
 	},
 	combine: function(partner){
-
-	}
+		//TODO
+	},
 	giveBirth: function(){
 		//TODO
 	},
