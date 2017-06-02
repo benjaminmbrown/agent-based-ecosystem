@@ -11,7 +11,7 @@ var Vehicle = function(x, y, Type) {
     this.type = Type || 2;
     this.flowfield;
 
-    this.cohesionDistance = 200;
+    this.cohesionDistance = 150;
     this.separationDistance = 45;
     this.alignmentDistance = 100;
 

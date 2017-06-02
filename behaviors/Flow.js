@@ -3,7 +3,7 @@
 var flowBehaviors = {
 	followFlow: function(flowfield){
         var desired = flowfield.lookup(this.position);
-        desired.mult(this.maxSpeed);
+        desired.mult(1);
         this.applyForce(this.steerTo(desired));
 
 	}

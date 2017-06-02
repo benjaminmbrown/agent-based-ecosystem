@@ -53,7 +53,7 @@ function draw() {
 function drawStats (){
     textSize(11);
     text('Flock size: ' + flock.getSize(), 10,30);
-    fill(0,102,53);
+    fill(255,255,53);
 }
 
 
