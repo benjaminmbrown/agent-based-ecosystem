@@ -2,6 +2,7 @@ var Agent = machina.Fsm.extend({
     initialize: function (options) {
         this.position = createVector(options.x, options.y);
         this.c = color(0, 0, 0,155);
+        this.mass = 5;
         this.isAlive = true;
     },
     namespace: "Agent",
@@ -18,7 +19,7 @@ var Agent = machina.Fsm.extend({
             _onEnter: function () {
                 console.log('spawning')
                 this.alpha =120;
-                this.radius = 7;
+                this.mass = 10;
                 this.c = color(120, 120, 120);
                 this.timer = setTimeout(function () {
                     this.handle("timeout");
@@ -35,7 +36,7 @@ var Agent = machina.Fsm.extend({
         living: {
             _onEnter: function () {
                this.alpha = 255;
-               this.radius = 12
+               this.mass = 20;
                   this.c = color(0, 255, 0);
                 this.timer = setTimeout(function () {
                     this.handle("timeout");
@@ -53,7 +54,7 @@ var Agent = machina.Fsm.extend({
         dying: {
             _onEnter: function () {
                     this.alpha = 120;
-                    this.radius = 8; 
+                    this.mass = 20; 
                   this.c = color(255, 255, 0);
                 this.timer = setTimeout(function () {
                     this.handle("timeout");
@@ -69,6 +70,7 @@ var Agent = machina.Fsm.extend({
         },
         dead: {
             _onEnter: function () {
+                this.mass = 0;
                 this.isAlive = false;
             }
         }
@@ -88,7 +90,7 @@ var Agent = machina.Fsm.extend({
         stroke(this.c, this.alpha); //gets more transparent as it dies
         strokeWeight(2);
         fill(this.c, this.alpha);
-        ellipse(this.position.x, this.position.y, this.radius*2, this.radius*2);
+        ellipse(this.position.x, this.position.y, this.mass, this.mass);
     }, 
     isAlive: function(){
         return this.isAlive;
